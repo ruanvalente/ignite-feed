@@ -50,6 +50,7 @@
 
 .profile__information--description {
   color: var(--gra5);
+  font-size: 14px;
 }
 
 .profile__line {
