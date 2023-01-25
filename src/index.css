@@ -159,7 +159,8 @@ body {
 
 #root,
 html {
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 button {

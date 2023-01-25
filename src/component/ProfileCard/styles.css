@@ -30,7 +30,7 @@
   border-radius: 8px;
 
   margin: 0 auto;
-  border: 4px solid var(--green);
+  border: 6px solid var(--green);
 }
 
 .profile__information {
@@ -67,7 +67,20 @@
 
 @media (max-width: 768px) {
   .profile {
-    max-width: 100%;
-    height: 320px;
+    grid-column: 1 / 4;
+    max-width: initial;
+    height: 45vh;
+  }
+
+  .profile__cover--user img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile__cover--user img {
+    width: 80px;
+    height: 80px;
   }
 }

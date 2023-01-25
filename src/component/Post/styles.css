@@ -1,8 +1,11 @@
 .post {
-  width: 100%;
   padding: 32px;
   background: var(--gray2);
   border-radius: 8px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: 2/4;
 }
 
 .post__content--line {
@@ -75,4 +78,10 @@
 .post__content--link strong {
   font-weight: bold;
   color: var(--green-light);
+}
+
+@media (max-width: 768px) {
+  .post {
+    grid-column: 1/4;
+  }
 }

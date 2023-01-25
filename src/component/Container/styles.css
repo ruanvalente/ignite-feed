@@ -1,13 +1,14 @@
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  grid-template-areas:
+    "profile post"
+    ".  post"
+    ".  post";
   gap: 32px;
+
+  max-width: 1200px;
 
   margin: 0 auto;
   padding: 32px;
-}
-
-@media (max-width: 998px) {
-  .container {
-    flex-wrap: wrap;
-  }
 }
