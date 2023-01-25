@@ -1,6 +1,6 @@
 import { IgniteFeedContainer } from "./component/Container";
-import { IgniteFeedFormContent } from "./component/FormContent";
 import { IgniteFeedHeader } from "./component/Header";
+import { IgniteFeedPost } from "./component/Post";
 import { IgniteFeedProfileCard } from "./component/ProfileCard";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
         <IgniteFeedHeader />
         <IgniteFeedContainer>
           <IgniteFeedProfileCard />
-          <IgniteFeedFormContent />
+          <IgniteFeedPost />
         </IgniteFeedContainer>
       </main>
     </>

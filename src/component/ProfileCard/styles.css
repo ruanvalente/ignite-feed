@@ -39,8 +39,6 @@
   align-items: center;
 
   margin-top: 60px;
-
-  height: 100%;
 }
 
 .profile__information--name {
@@ -65,4 +63,11 @@
   gap: 8px;
 
   margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    max-width: 100%;
+    height: 320px;
+  }
 }

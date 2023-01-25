@@ -2,8 +2,12 @@
   display: flex;
   gap: 32px;
 
-  max-width: 1200px;
-
   margin: 0 auto;
   padding: 32px;
+}
+
+@media (max-width: 998px) {
+  .container {
+    flex-wrap: wrap;
+  }
 }
