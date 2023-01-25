@@ -1,3 +1,17 @@
+.feedbacks {
+  margin-top: 24px;
+}
+
+.feedback__title {
+  margin-bottom: 16px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+
+  color: var(--gray7);
+}
+
 .feedback__area {
   height: 96px;
   width: 100%;
