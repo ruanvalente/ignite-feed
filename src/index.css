@@ -128,6 +128,11 @@ table {
   border-spacing: 0;
 }
 
+textarea,
+button {
+  font-family: "Roboto", sans-serif;
+}
+
 img {
   display: block;
   width: 100%;

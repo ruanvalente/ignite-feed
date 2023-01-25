@@ -2,7 +2,7 @@ import "./styles.css";
 
 export function IgniteFeedFormContent() {
   return (
-    <div className="post">
+    <section className="post">
       <div className="post__profile">
         <img
           className="post__profile--image"
@@ -38,6 +38,18 @@ export function IgniteFeedFormContent() {
           <span className="post__content--tag">#rocketseat</span>
         </div>
       </div>
-    </div>
+
+      <div className="post__content--line" />
+
+      <section className="feedbacks">
+        <h4 className="feedback__title">Deixe seu feedback</h4>
+
+        <textarea className="feedback__area" name="feedback" id="feedback">
+          Nossa, adorei amigo! Parabéns !
+        </textarea>
+
+        <button className="feedback__submit">Publicar</button>
+      </section>
+    </section>
   );
 }
