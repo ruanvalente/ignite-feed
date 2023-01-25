@@ -1,3 +1,6 @@
+import { IgniteFeedFeedbackArea } from "../Feedback";
+import { IgniteFeedTags } from "../Tags";
+
 import "./styles.css";
 
 export function IgniteFeedFormContent() {
@@ -32,24 +35,12 @@ export function IgniteFeedFormContent() {
             <strong>👉 jane.design/doctorcare</strong>
           </p>
         </div>
-        <div className="post__tags">
-          <span className="post__content--tag"> #novoprojeto</span>
-          <span className="post__content--tag">#nlw</span>
-          <span className="post__content--tag">#rocketseat</span>
-        </div>
+        <IgniteFeedTags />
       </div>
 
       <div className="post__content--line" />
 
-      <section className="feedbacks">
-        <h4 className="feedback__title">Deixe seu feedback</h4>
-
-        <textarea className="feedback__area" name="feedback" id="feedback">
-          Nossa, adorei amigo! Parabéns !
-        </textarea>
-
-        <button className="feedback__submit">Publicar</button>
-      </section>
+      <IgniteFeedFeedbackArea />
     </section>
   );
 }
