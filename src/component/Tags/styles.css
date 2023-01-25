@@ -1,0 +1,20 @@
+.post__tags {
+  padding-top: 32px;
+  padding-bottom: 24px;
+}
+
+.post__content--tag {
+  font-weight: bold;
+  color: var(--green-light);
+
+  transition: all 0.3s;
+}
+
+.post__content--tag:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+
+.post__content--tag + span {
+  margin-left: 8px;
+}
