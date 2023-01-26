@@ -1,3 +1,4 @@
+import { IgniteFeedComments } from "../Comments";
 import { IgniteFeedFeedbackArea } from "../Feedback";
 import { IgniteFeedTags } from "../Tags";
 
@@ -75,6 +76,7 @@ export function IgniteFeedPost() {
           <div className="post__content--line" />
           <IgniteFeedTags />
           <IgniteFeedFeedbackArea />
+          <IgniteFeedComments />
         </div>
       </section>
     </>
