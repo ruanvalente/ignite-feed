@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Trash, ThumbsUp } from "phosphor-react";
 
 import "./styles.css";
 
-export function IgniteFeedComments() {
-  const [quantityLike, setQuantityLike] = useState(0);
+export function IgniteFeedComments({ comment }) {
+  const [likeCount, setLikeCount] = useState(0);
 
-  function handleCommentLike() {
-    setQuantityLike((prevQuantityLike) => (prevQuantityLike += 1));
+  function handleLikeCount() {
+    setLikeCount((prevLikeCount) => (prevLikeCount += 1));
   }
 
   return (
@@ -29,16 +29,16 @@ export function IgniteFeedComments() {
           </div>
           <p className="comment__user--time">Cerca de 2h</p>
 
-          <div className="comment">Muito bom, parabéns 👏🏼👏🏼</div>
+          <div className="comment">{comment}</div>
         </div>
       </div>
       <button
-        onClick={handleCommentLike}
+        onClick={handleLikeCount}
         className={`comment__like ${
-          quantityLike >= 1 ? "comment__like--applause" : ""
+          likeCount >= 1 ? "comment__like--applause" : ""
         }`}
       >
-        <ThumbsUp size={24} /> Aplaudir <span>{quantityLike || null}</span>
+        <ThumbsUp size={24} /> Aplaudir <span>{likeCount || null}</span>
       </button>
     </section>
   );

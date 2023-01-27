@@ -1,3 +1,4 @@
+import { useEffect, useId } from "react";
 import { IgniteFeedComments } from "../Comments";
 import { IgniteFeedFeedbackArea } from "../Feedback";
 import { IgniteFeedTags } from "../Tags";
@@ -5,6 +6,26 @@ import { IgniteFeedTags } from "../Tags";
 import "./styles.css";
 
 export function IgniteFeedPost() {
+  const commentList = [
+    {
+      id: useId(),
+      comment:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, illo placeat? Labore autem officiis quibusdam soluta neque reiciendis quaerat facere, nemo nisi ipsam sunt dolor, est explicabo tempore cupiditate tenetur.",
+      like: 0,
+    },
+    {
+      id: useId(),
+      comment:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium esse nam impedit, deserunt quasi velit harum nobis provident repellendus molestiae officiis voluptas accusantium ut sequi tenetur tempore modi? Numquam, est?",
+      like: 2,
+    },
+    {
+      id: useId(),
+      comment:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, modi praesentium nisi vitae totam ipsum voluptatibus deserunt beatae nemo, cumque reprehenderit suscipit ducimus, vel corporis dolore quidem quis consequuntur distinctio?",
+      like: 3,
+    },
+  ];
   return (
     <>
       <section className="post">
@@ -76,7 +97,10 @@ export function IgniteFeedPost() {
           <div className="post__content--line" />
           <IgniteFeedTags />
           <IgniteFeedFeedbackArea />
-          <IgniteFeedComments />
+
+          {commentList.map(({ comment, id }) => (
+            <IgniteFeedComments key={id} comment={comment} />
+          ))}
         </div>
       </section>
     </>

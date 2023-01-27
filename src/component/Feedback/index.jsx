@@ -1,8 +1,25 @@
+import { useState } from "react";
+
 import "./styles.css";
 
 export function IgniteFeedFeedbackArea() {
+  const [feedback, setFeedback] = useState("");
+  const [newFeedBack, setNewFeedBack] = useState("");
+  const isNewFeedBackEmpty = newFeedBack.length === 0;
+
+  function handleCreateNewComment(event) {
+    event.preventDefault();
+    setFeedback([...feedback, newFeedBack]);
+    setNewFeedBack("");
+  }
+
+  function handleNewCommentChange() {
+    event.target.setCustomValidity("");
+    setNewFeedBack(event.target.value);
+  }
+
   return (
-    <section className="feedbacks">
+    <form className="feedbacks" onSubmit={handleCreateNewComment}>
       <h4 className="feedback__title">Deixe seu feedback</h4>
 
       <textarea
@@ -10,9 +27,13 @@ export function IgniteFeedFeedbackArea() {
         name="feedback"
         id="feedback"
         placeholder="Escreva o seu comentário...."
+        onChange={handleNewCommentChange}
+        value={newFeedBack}
       ></textarea>
 
-      <button className="feedback__submit">Publicar</button>
-    </section>
+      <button disabled={isNewFeedBackEmpty} className="feedback__submit">
+        Publicar
+      </button>
+    </form>
   );
 }
